@@ -1,0 +1,206 @@
+/* Genel Sayfa Stilleri */
+:root {
+    --bg-color: #1a1a2e;
+    --primary-color: #16213e;
+    --secondary-color: #0f3460;
+    --accent-color: #e94560;
+    --text-color: #e0e0e0;
+    --font-header: 'Orbitron', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--accent-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-header);
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 2em;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Ana İçerik */
+.mod-header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.mod-header h2 {
+    font-family: var(--font-header);
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.mod-header .subtitle {
+    font-size: 1.2em;
+    color: #a0a0a0;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+section {
+    background-color: var(--primary-color);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+section h3 {
+    font-family: var(--font-header);
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.mod-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* İndirme Tablosu */
+#versionSearch {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+#downloadTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#downloadTable th, #downloadTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+#downloadTable thead {
+    background-color: var(--secondary-color);
+}
+
+#downloadTable tbody tr:hover {
+    background-color: #2a2a4e;
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.tag.normal { background-color: #4CAF50; }
+.tag.beta { background-color: #f44336; }
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #d43d51;
+}
+
+/* Sidebar */
+.sidebar-widget {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sidebar-widget h4 {
+    font-family: var(--font-header);
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.sidebar-widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-widget ul li {
+    padding: 5px 0;
+    border-bottom: 1px dashed var(--secondary-color);
+}
+
+.sidebar-widget ul li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid var(--secondary-color);
+    margin-top: 20px;
+}
