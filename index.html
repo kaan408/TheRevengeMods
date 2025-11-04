@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MODUNUN ADINI BURAYA YAZ -->
+    <title>GG Forge - Efsanevi Modun</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">GG FORGE</h1>
+            <nav>
+                <a href="#about">Hakkında</a>
+                <a href="#downloads">İndirmeler</a>
+                <a href="#changelog">Değişiklikler</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="mod-header">
+            <!-- MODUNUN ADINI BURAYA YAZ -->
+            <h2>Efsanevi Modun Adı</h2>
+            <!-- MODUNUN KISA AÇIKLAMASINI BURAYA YAZ -->
+            <p class="subtitle">Minecraft 1.19.2 için oyuna yeni bir soluk getiren mod.</p>
+        </section>
+
+        <div class="content-wrapper">
+            <div class="main-content">
+                <section id="about">
+                    <h3>Mod Hakkında</h3>
+                    <!-- MODUNUN DETAYLI AÇIKLAMASINI BURAYA YAZ -->
+                    <p>Bu mod, oyuna yeni zırhlar, eşsiz yaratıklar ve keşfedilecek gizemli boyutlar ekler. Macerayı seven oyuncular için tasarlandı. Her köşede yeni bir sürprizle karşılaşmaya hazır olun!</p>
+                    <!-- KENDİ EKRAN GÖRÜNTÜNÜN LİNKİNİ BURAYA KOYABİLİRSİN -->
+                    <img src="https://via.placeholder.com/600x300.png?text=Modundan+Bir+Ekran+Görüntüsü" alt="Moddan bir görüntü" class="mod-image">
+                    <p>Modu geliştirmeye devam ediyorum ve topluluktan gelen geri bildirimler benim için çok değerli. Fikirlerinizi ve önerilerinizi bekliyorum.</p>
+                </section>
+
+                <section id="downloads">
+                    <h3>İndirmeler</h3>
+                    <p>Her zaman en son sürümü kullanmanız önerilir.</p>
+                    
+                    <input type="text" id="versionSearch" onkeyup="filterVersions()" placeholder="Sürüm ara (örn: 1.1)...">
+
+                    <table id="downloadTable">
+                        <thead>
+                            <tr>
+                                <th>Mod Sürümü</th>
+                                <th>Minecraft Sürümü</th>
+                                <th>Tür</th>
+                                <th>Yayınlanma Tarihi</th>
+                                <th>İndir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- EN YENİ SÜRÜMÜ HER ZAMAN EN ÜSTE EKLE -->
+                            
+                            <!-- Örnek Sürüm 1 (Normal) -->
+                            <tr>
+                                <td>v1.1 Normal</td>
+                                <td>1.19.2</td>
+                                <td><span class="tag normal">Normal</span></td>
+                                <td>25.10.2023</td>
+                                <td><a href="./downloads/modun-v1.1-normal.jar" class="download-btn" download>İndir</a></td>
+                            </tr>
+                            
+                            <!-- Örnek Sürüm 2 (Beta) -->
+                            <tr>
+                                <td>v1.0 Beta</td>
+                                <td>1.19.2</td>
+                                <td><span class="tag beta">Beta</span></td>
+                                <td>15.10.2023</td>
+                                <td><a href="./downloads/modun-v1.0-beta.jar" class="download-btn" download>İndir</a></td>
+                            </tr>
+                            
+                            <!-- Yeni sürüm çıktıkça bu satırlardan birini kopyalayıp en üste yapıştır ve bilgilerini güncelle. -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget" id="changelog">
+                    <h4>Değişiklik Günlüğü (Changelog)</h4>
+                    <h5>v1.1 (En Yeni)</h5>
+                    <ul>
+                        <li>Yeni "Gölge Kılıcı" eklendi.</li>
+                        <li>Performans iyileştirmeleri yapıldı.</li>
+                        <li>Birkaç küçük hata düzeltildi.</li>
+                    </ul>
+                    <h5>v1.0 Beta</h5>
+                    <ul>
+                        <li>Modun ilk beta sürümü yayınlandı.</li>
+                        <li>Temel zırh ve yaratıklar eklendi.</li>
+                    </ul>
+                </div>
+                <div class="sidebar-widget">
+                    <h4>Gereksinimler</h4>
+                    <ul>
+                        <li>Minecraft 1.19.2</li>
+                        <li>Forge 43.2.0 veya üstü</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!-- KENDİ ADINI VEYA NICKNAME'İNİ YAZ -->
+            <p>&copy; 2023 GG Forge - Geliştirici: [Senin Adın]. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
