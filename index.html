@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- MODUNUN ADINI BURAYA YAZ -->
-    <title>GG Forge - The Revenge warriors</title>
+    <title>GG Forge - Mod & Resource Hub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,119 +15,141 @@
         <div class="container">
             <h1 class="logo">GG FORGE</h1>
             <nav>
-                <a href="#about">Hakkında</a>
-                <a href="#downloads">İndirmeler</a>
-                <a href="#changelog">Değişiklikler</a>
+                <a href="#about">Ana Sayfa</a>
+                <a href="#mods">Modlar</a>
+                <a href="#resourcepacks">Doku Paketleri</a>
+                <a href="#changelog">Güncellemeler</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="mod-header">
-            <!-- MODUNUN ADINI BURAYA YAZ -->
-            <h2>The Revenge Warriors</h2>
-            <!-- MODUNUN KISA AÇIKLAMASINI BURAYA YAZ -->
-            <p class="subtitle">Minecraft 1.19.2 - 1.20.1 için oyuna yeni bir Heyecan mod.</p>
+        <section class="repo-header">
+            <h2>GG FORGE REPOSITORY</h2>
+            <p class="subtitle">The Revenge Warriors ve Özel Doku Paketlerinin Resmi Evi</p>
         </section>
 
         <div class="content-wrapper">
             <div class="main-content">
+                
+                <!-- HAKKINDA / GİRİŞ -->
                 <section id="about">
-                    <h3>Mod Hakkında</h3>
-                    <!-- MODUNUN DETAYLI AÇIKLAMASINI BURAYA YAZ -->
-                    <p>Bu Mod The Revenge warriorstaki manyakların güçlü islahlarını içerir indir ve eğlencene bak !</p>
-                    <!-- KENDİ EKRAN GÖRÜNTÜNÜN LİNKİNİ BURAYA KOYABİLİRSİN -->
-                    <img src="mod.jpg" height="500" width="900">
-                    <p>Modu geliştirmeye devam ediyorum ve topluluktan gelen geri bildirimler benim için çok değerli. Fikirlerinizi ve önerilerinizi bekliyorum.</p>
+                    <h3>Proje Hakkında</h3>
+                    <p>GG Forge, Minecraft deneyiminizi zorlaştırmak ve görselleştirmek için geliştirilen içeriklerin toplandığı merkezdir. Burada hem "The Revenge Warriors" modunu hem de özel doku paketlerini bulabilirsiniz.</p>
+                    <img src="mod.jpg" class="mod-image" alt="Mod Tanıtım Görseli">
                 </section>
 
-                <section id="downloads">
-                    <h3>İndirmeler</h3>
-                    <p>Her zaman en son sürümü kullanmanız önerilir.</p>
-                    
-                    <input type="text" id="versionSearch" onkeyup="filterVersions()" placeholder="Sürüm ara (örn: 1.1)...">
+                <!-- ARAMA ÇUBUĞU -->
+                <div class="search-container">
+                    <input type="text" id="versionSearch" onkeyup="filterContent()" placeholder="Sürüm veya dosya adı ara (örn: 1.19)...">
+                </div>
 
-                    <table id="downloadTable">
+                <!-- BÖLÜM 1: MODLAR -->
+                <section id="mods" class="category-section">
+                    <div class="section-title">
+                        <span class="icon">⚙️</span>
+                        <h3>Minecraft Modları</h3>
+                    </div>
+                    <p>Oyun mekaniklerini değiştiren, yeni kılıçlar ve yaratıklar ekleyen modlar.</p>
+                    
+                    <table class="download-table searchable-table">
                         <thead>
                             <tr>
-                                <th>Mod Sürümü</th>
-                                <th>Minecraft Sürümü</th>
-                                <th>Tür</th>
-                                <th>Yayınlanma Tarihi</th>
+                                <th>Dosya Adı</th>
+                                <th>MC Sürümü</th>
+                                <th>Kategori</th>
+                                <th>Tarih</th>
                                 <th>İndir</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- EN YENİ SÜRÜMÜ HER ZAMAN EN ÜSTE EKLE -->
-                            
-                            <!-- Örnek Sürüm 1 (Normal) -->
+                            <!-- The Revenge Warriors Sürümleri -->
                             <tr>
-                                <td>v0.3 Beta</td>
+                                <td>The Revenge Warriors v0.3</td>
                                 <td>1.19.2</td>
-                                <td><span class="tag beta">Beta</span></td>
-                                <td>4.11.2025</td>
+                                <td><span class="tag mod">Forge Mod</span> <span class="tag beta">Beta</span></td>
+                                <td>04.11.2025</td>
                                 <td><a href="trw-0.0.3-forge-1.19.2.jar" class="download-btn" download>İndir</a></td>
                             </tr>
-                            
-                            <!-- Örnek Sürüm 2 (Beta) -->
                             <tr>
-                                <td>v0.2 Beta</td>
+                                <td>The Revenge Warriors v0.2</td>
                                 <td>1.19.2</td>
-                                <td><span class="tag beta">Beta</span></td>
-                                <td>2.11.2025</td>
+                                <td><span class="tag mod">Forge Mod</span> <span class="tag beta">Beta</span></td>
+                                <td>02.11.2025</td>
                                 <td><a href="trw-0.0.2-forge-1.19.2.jar" class="download-btn" download>İndir</a></td>
                             </tr>
-                            
-                             <tr>
-                                <td>v0.1 Beta</td>
+                            <tr>
+                                <td>The Revenge Warriors v0.1</td>
                                 <td>1.19.2</td>
-                                <td><span class="tag beta">Beta</span></td>
-                                <td>1.11.2025</td>
+                                <td><span class="tag mod">Forge Mod</span> <span class="tag beta">Beta</span></td>
+                                <td>01.11.2025</td>
                                 <td><a href="trw-0.0.1-forge-1.19.2.jar" class="download-btn" download>İndir</a></td>
                             </tr>
+                        </tbody>
+                    </table>
+                </section>
 
+                <!-- BÖLÜM 2: DOKU PAKETLERİ (RESOURCE PACKS) -->
+                <section id="resourcepacks" class="category-section">
+                    <div class="section-title">
+                        <span class="icon">🎨</span>
+                        <h3>Doku Paketleri (Resource Packs)</h3>
+                    </div>
+                    <p>Oyunun görünümünü değiştiren, GUI ve blok tasarımları.</p>
+
+                    <table class="download-table searchable-table">
+                        <thead>
                             <tr>
-                                <td>v1.2 Beta-t</td>
+                                <th>Dosya Adı</th>
+                                <th>MC Sürümü</th>
+                                <th>Kategori</th>
+                                <th>Tarih</th>
+                                <th>İndir</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Resource Pack Sürümleri -->
+                            <tr>
+                                <td>GG Games UI Pack v1.2</td>
                                 <td>1.21.8</td>
-                                <td><span class="tag beta">Beta</span></td>
-                                <td><span class="tag beta">Test</span></td>
+                                <td><span class="tag pack">Texture Pack</span> <span class="tag test">Test</span></td>
                                 <td>27.01.2026</td>
                                 <td><a href="gg_games-1.2-resourcepack-1.21.8.zip" class="download-btn" download>İndir</a></td>
                             </tr>
-                            
-                            
-                            <!-- Yeni sürüm çıktıkça bu satırlardan birini kopyalayıp en üste yapıştır ve bilgilerini güncelle. -->
+                            <!-- Gelecekteki texture packleri buraya ekle -->
                         </tbody>
                     </table>
                 </section>
             </div>
 
+            <!-- YAN PANEL (SIDEBAR) -->
             <aside class="sidebar">
                 <div class="sidebar-widget" id="changelog">
-                    <h4>Değişiklik Günlüğü (Changelog)</h4>
-                    <h5>v0.3 (En Yeni)</h5>
-                    <ul>
-                        <li>Yeni "The Duck King'in" eklendi.</li>
-                        <li>Dengelemeler yapıldı.</li>
-                        <li>Birkaç küçük hata düzeltildi.</li>
-                        <li>Birkaç küçük hata düzeltildi.</li>
-                        <li>Yeni "Nihai Kılıç" eklendi.</li>
-                        <li>Yeni 2 Başarım ve Başarım Listesi Güncellendi</li>
+                    <h4>Son Değişiklikler</h4>
                     
-                    </ul>
-                    <h5>v0.2 Beta</h5>
-                    <ul>
-                        <li>Yeni "The warden Lord'un" kılıcı eklendi</li>
-                        <li>Temel zırh  eklendi.</li>
-                         <li>ve dahası.</li>
-                    </ul>
+                    <div class="log-entry">
+                        <h5>Resource Pack v1.2</h5>
+                        <ul>
+                            <li>Menü tasarımları yenilendi.</li>
+                            <li>Font düzeltmeleri.</li>
+                        </ul>
+                    </div>
+
+                    <div class="log-entry">
+                        <h5>Mod v0.3</h5>
+                        <ul>
+                            <li>The Duck King eklendi.</li>
+                            <li>Nihai Kılıç eklendi.</li>
+                            <li>Hata düzeltmeleri.</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="sidebar-widget">
-                    <h4>Gereksinimler</h4>
-                    <ul>
-                        <li>Minecraft 1.19.2</li>
-                        <li>Forge 43.2.0 veya üstü</li>
-                    </ul>
+                    <h4>Kurulum Bilgisi</h4>
+                    <p><strong>Modlar için:</strong> .jar dosyasını <code>/mods</code> klasörüne atın.</p>
+                    <hr>
+                    <p><strong>Paketler için:</strong> .zip dosyasını <code>/resourcepacks</code> klasörüne atın.</p>
                 </div>
             </aside>
         </div>
@@ -136,8 +157,7 @@
 
     <footer>
         <div class="container">
-            <!-- KENDİ ADINI VEYA NICKNAME'İNİ YAZ -->
-            <p>&copy; 2023-2025 GG Forge - Geliştirici: GG-Kaan. Tüm hakları saklıdır.</p>
+            <p>&copy; 2023-2026 GG Forge - Geliştirici: GG-Kaan.</p>
         </div>
     </footer>
 
