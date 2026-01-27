@@ -1,9 +1,11 @@
 /* Genel Sayfa Stilleri */
 :root {
-    --bg-color: #1a1a2e;
-    --primary-color: #16213e;
-    --secondary-color: #0f3460;
-    --accent-color: #e94560;
+    --bg-color: #121212;
+    --primary-color: #1e1e24;
+    --secondary-color: #2b2b36;
+    --accent-color: #ff6b6b; /* Ana Vurgu Rengi */
+    --mod-color: #4d96ff;     /* Modlar için Mavi */
+    --pack-color: #6bcb77;    /* Paketler için Yeşil */
     --text-color: #e0e0e0;
     --font-header: 'Orbitron', sans-serif;
     --font-body: 'Roboto', sans-serif;
@@ -14,7 +16,7 @@ body {
     color: var(--text-color);
     font-family: var(--font-body);
     margin: 0;
-    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -27,10 +29,11 @@ body {
 header {
     background-color: var(--primary-color);
     padding: 1rem 0;
-    border-bottom: 3px solid var(--accent-color);
+    border-bottom: 2px solid var(--secondary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
 header .container {
@@ -43,42 +46,48 @@ header .container {
     font-family: var(--font-header);
     color: var(--accent-color);
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.8em;
+    letter-spacing: 2px;
 }
 
 nav a {
     color: var(--text-color);
     text-decoration: none;
-    margin-left: 25px;
-    font-weight: bold;
+    margin-left: 20px;
+    font-weight: 500;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9em;
 }
 
 nav a:hover {
     color: var(--accent-color);
 }
 
-/* Ana İçerik */
-.mod-header {
+/* Ana Başlık */
+.repo-header {
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 0;
+    background: radial-gradient(circle at center, #1f2a38 0%, var(--bg-color) 70%);
 }
 
-.mod-header h2 {
+.repo-header h2 {
     font-family: var(--font-header);
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
 }
 
-.mod-header .subtitle {
-    font-size: 1.2em;
-    color: #a0a0a0;
+.subtitle {
+    color: #888;
+    margin-top: 10px;
 }
 
+/* Düzen */
 .content-wrapper {
     display: flex;
     gap: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .main-content {
@@ -89,83 +98,113 @@ nav a:hover {
     flex: 1;
 }
 
+/* Bölümler */
 section {
     background-color: var(--primary-color);
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 8px;
-    border-left: 5px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);
 }
 
-section h3 {
-    font-family: var(--font-header);
-    color: var(--accent-color);
+.section-title {
+    display: flex;
+    align-items: center;
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 10px;
-    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.section-title .icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.section-title h3 {
+    font-family: var(--font-header);
+    color: #fff;
+    margin: 0;
 }
 
 .mod-image {
-    max-width: 100%;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-/* İndirme Tablosu */
-#versionSearch {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
     border-radius: 5px;
-    border: 2px solid var(--secondary-color);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 1em;
+    border: 1px solid var(--secondary-color);
+    margin-top: 15px;
 }
 
-#downloadTable {
+/* Arama */
+.search-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Tablolar */
+.download-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 15px;
 }
 
-#downloadTable th, #downloadTable td {
-    padding: 15px;
+.download-table th {
     text-align: left;
-    border-bottom: 1px solid var(--secondary-color);
-}
-
-#downloadTable thead {
+    padding: 12px;
     background-color: var(--secondary-color);
-}
-
-#downloadTable tbody tr:hover {
-    background-color: #2a2a4e;
-}
-
-.tag {
-    padding: 5px 10px;
-    border-radius: 15px;
     color: #fff;
-    font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
-.tag.normal { background-color: #4CAF50; }
-.tag.beta { background-color: #f44336; }
+.download-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--secondary-color);
+    color: #ccc;
+}
+
+.download-table tr:hover {
+    background-color: #25252e;
+}
+
+/* Etiketler (Tags) */
+.tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.tag.mod { background-color: var(--mod-color); }
+.tag.pack { background-color: var(--pack-color); }
+.tag.beta { background-color: #ff9f43; color: #333; }
+.tag.test { background-color: #5f27cd; }
 
 .download-btn {
-    display: inline-block;
     background-color: var(--accent-color);
     color: #fff;
-    padding: 8px 15px;
+    padding: 6px 12px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: transform 0.2s;
+    display: inline-block;
 }
 
 .download-btn:hover {
-    background-color: #d43d51;
+    background-color: #ff4757;
+    transform: translateY(-2px);
 }
 
 /* Sidebar */
@@ -173,6 +212,7 @@ section h3 {
     background-color: var(--primary-color);
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -180,27 +220,27 @@ section h3 {
     font-family: var(--font-header);
     color: var(--accent-color);
     margin-top: 0;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 10px;
 }
 
-.sidebar-widget ul {
-    list-style: none;
-    padding: 0;
+.log-entry h5 {
+    margin: 10px 0 5px 0;
+    color: #fff;
 }
 
-.sidebar-widget ul li {
-    padding: 5px 0;
-    border-bottom: 1px dashed var(--secondary-color);
-}
-
-.sidebar-widget ul li:last-child {
-    border-bottom: none;
+.log-entry ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #bbb;
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
     text-align: center;
-    padding: 20px 0;
-    border-top: 3px solid var(--secondary-color);
-    margin-top: 20px;
+    padding: 40px 0;
+    color: #666;
+    font-size: 0.9em;
+    border-top: 1px solid var(--secondary-color);
 }
